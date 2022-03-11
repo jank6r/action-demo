@@ -18,6 +18,7 @@ jobs:
           args: 'Hello J.'
       - uses: actions/checkout@v1
       - name: Run a script
+        uses: docker://node:latest
         with:
           entrypoint: ./script.sh
           args: 'Hello J.'
