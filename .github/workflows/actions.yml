@@ -4,7 +4,7 @@ on: ["push"]
 
 jobs:
   run-github-actioons:
-    runs-on: ubunutu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
