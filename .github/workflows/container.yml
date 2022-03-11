@@ -11,3 +11,13 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
+      - name: Step with node-docker
+        uses: docker://node:latest
+        with:
+          entrypoint: '/bin/echo'
+          args: 'Hello J.'
+      - uses: actions/checkout@v1
+      - name: Run a script
+        with:
+          entrypoint: ./script.sh
+          args: 'Hello J.'
